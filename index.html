@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FAF7F2">
+<title>拒绝话术速查表 · 同事甩活 / 亲戚问工资 / 朋友借钱</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{background:#F1EAE1}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  color:#33403D;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.app{max-width:430px;min-height:100vh;margin:0 auto;background:#FAF7F2;position:relative;overflow:hidden}
+.pad{padding:0 20px 50px}
+
+/* ---------- 通用 ---------- */
+.eyebrow{font-size:12px;letter-spacing:.18em;color:#9AA8A4;font-weight:600}
+.h1{font-size:29px;line-height:1.28;font-weight:800;letter-spacing:-.01em}
+.h2{font-size:18px;font-weight:800;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+.h2::before{content:"";width:4px;height:16px;border-radius:3px;background:var(--teal)}
+.h3{font-size:15px;font-weight:800;margin:0 0 8px}
+.sub{color:#63736F;font-size:14px}
+.card{background:#fff;border-radius:22px;padding:20px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07)}
+.tag{display:inline-block;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700;background:#EAF3F0;color:#4E8C84}
+.tag.a{background:#FBEADC;color:#B46B3C}.tag.b{background:#E4F0ED;color:#4E8C84}
+.tag.c{background:#ECE9F7;color:#6E65A8}.tag.d{background:#E3ECF5;color:#4B7196}
+.rule{height:1px;background:#EFE8DF;margin:16px 0}
+.muted{color:#8C9A96;font-size:12.5px;line-height:1.75}
+.lead{color:#63736F;font-size:14.5px}
+
+/* ---------- 首页 ---------- */
+.hero{position:relative;padding:42px 0 6px;text-align:center}
+.blob{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:200px;height:200px;
+  background:radial-gradient(circle at 35% 30%,#FBE3CE,#F6D5C2 45%,#DCEBE6 100%);
+  filter:blur(7px);opacity:.7;z-index:0;pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .h1{margin:12px 0 8px}
+.hero .lead{color:#63736F;font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 2px}
+.chip{background:#fff;border:1px solid #EEE5DA;border-radius:999px;padding:6px 13px;font-size:12.5px;color:#5C6B67;font-weight:600}
+.tipbar{display:flex;gap:9px;align-items:flex-start;background:#EAF4F1;border-radius:16px;padding:13px 14px;margin:20px 0 0}
+.tipbar .ic{flex:0 0 26px;width:26px;height:26px;border-radius:9px;background:#71B0A4;color:#fff;font-size:14px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.tipbar .tx{flex:1;font-size:13px;color:#4B5C58;line-height:1.7}
+
+/* ---------- 速查表 ---------- */
+.quick{background:#fff;border-radius:22px;padding:16px 12px 12px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:16px}
+.qt{width:100%;border-collapse:collapse;table-layout:fixed}
+.qt th,.qt td{border-bottom:1px dashed #EFE8DF;padding:9px 6px;vertical-align:top;text-align:left;font-size:11.5px;line-height:1.55}
+.qt th{font-size:11.5px;color:#8C9A96;font-weight:800;letter-spacing:.02em;padding-bottom:8px}
+.qt td:first-child,.qt th:first-child{width:64px;padding-left:4px}
+.qt tr:last-child td{border-bottom:0}
+.qt .sc{font-weight:800;color:#33403D;font-size:12px}
+.qt .g{color:#54635F}
+.qt .v1{color:#3F6F68;font-weight:700}
+.qt .v2{color:#8A6238;font-weight:700}
+.qt .v3{color:#5E5790;font-weight:700}
+.qtcap{display:flex;align-items:center;justify-content:space-between;margin:0 4px 6px}
+.qtcap .t{font-size:15px;font-weight:800}
+.qtcap .b{font-size:11px;color:#A5AFA9}
+
+/* ---------- 场景 ---------- */
+.sc-head{display:flex;align-items:flex-start;gap:12px;margin:30px 0 12px}
+.sc-no{flex:0 0 38px;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#71B0A4,#4E8C84);color:#fff;
+  font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.sc-head .tt{flex:1}
+.sc-head .tt .n{font-size:19px;font-weight:800;line-height:1.35}
+.sc-head .tt .d{font-size:13px;color:#8C9A96;margin-top:3px}
+.ver{background:#fff;border-radius:20px;padding:17px 16px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-bottom:12px}
+.vhead{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.vhead .nm{font-size:15.5px;font-weight:800;display:flex;align-items:center;gap:8px}
+.vhead .dot{width:9px;height:9px;border-radius:50%}
+.copyall{border:1px solid #E9E1D6;background:#fff;border-radius:999px;padding:5px 12px;font-size:11.5px;color:#8C9A96;font-weight:700;cursor:pointer;font-family:inherit}
+.copyall:active{background:#F5F1EA}
+.line{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;background:#FAF7F2;border:1px solid #EFE7DC;border-radius:14px;
+  margin-bottom:9px;cursor:pointer;transition:all .15s ease}
+.line:active{transform:scale(.99);border-color:#71B0A4;background:#EAF4F1}
+.line .tx{flex:1;font-size:14.5px;line-height:1.66;color:#3E4B48}
+.line .cp{flex:0 0 20px;width:20px;height:20px;border-radius:7px;background:#EAF3F0;color:#4E8C84;font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:3px}
+.meta{margin-top:12px;border-radius:14px;padding:12px 13px;background:#F7F3EC}
+.meta .r{display:flex;gap:10px;align-items:flex-start;padding:5px 0;font-size:13px;line-height:1.7;color:#54635F}
+.meta .r .k{flex:0 0 74px;font-size:11.5px;font-weight:800;color:#9AA8A4;letter-spacing:.02em;padding-top:2px}
+.meta .r .v{flex:1}
+.meta .r .v em{font-style:normal;color:#33403D;font-weight:700}
+
+/* ---------- 自测 ---------- */
+.qwrap{background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 8px 26px rgba(74,90,84,.08)}
+.qbar{height:7px;border-radius:99px;background:#EBE3D9;overflow:hidden;margin-bottom:16px}
+.qbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#8FC7BC,#E9A178);transition:width .3s ease}
+.qcnt{font-size:12.5px;color:#8C9A96;font-weight:700;margin-bottom:9px}
+.qcnt b{color:#4E8C84;font-size:15px}
+.qtext{font-size:18px;font-weight:700;line-height:1.55;margin-bottom:16px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;background:#FAF7F2;border:1.5px solid #EFE7DC;
+  border-radius:16px;padding:13px 14px;font-size:14.5px;line-height:1.6;color:#3E4B48;cursor:pointer;font-family:inherit;transition:all .15s ease}
+.opt:active{transform:scale(.99)}
+.opt .k{flex:0 0 23px;width:23px;height:23px;border-radius:8px;background:#EDE5DA;color:#8C9A96;font-size:12.5px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:2px}
+.opt.sel{border-color:#71B0A4;background:#EAF4F1}
+.opt.sel .k{background:#71B0A4;color:#fff}
+.backbtn{border:0;background:transparent;color:#8C9A96;font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit;padding:2px 0;margin-top:14px}
+.res-hero{border-radius:22px;padding:24px 20px;position:relative;overflow:hidden}
+.res-hero .kicker{font-size:12px;letter-spacing:.16em;font-weight:700;opacity:.78}
+.res-hero .tname{font-size:27px;font-weight:900;margin:8px 0 4px}
+.res-hero .oneline{font-size:14.5px;line-height:1.75;margin-top:12px}
+.res-list{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+.res-item{background:#fff;border-radius:16px;padding:13px 14px;display:flex;gap:11px;align-items:flex-start;box-shadow:0 4px 16px rgba(74,90,84,.06)}
+.res-item .ic{flex:0 0 26px;width:26px;height:26px;border-radius:9px;color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.res-item .tx{flex:1;font-size:14px;line-height:1.72;color:#4B5C58}
+.res-item .tx b{display:block;color:#33403D;font-size:14.5px;margin-bottom:3px}
+.rbtn{display:block;width:100%;padding:15px;border:0;border-radius:17px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:11px}
+.rbtn.p{background:linear-gradient(135deg,#71B0A4,#4E8C84);color:#fff;box-shadow:0 8px 20px rgba(78,140,132,.24)}
+.rbtn.s{background:#fff;border:1px solid #E9E1D6;color:#6B7A76}
+
+.foot{text-align:center;color:#B0B8B4;font-size:11.5px;line-height:1.85;margin-top:26px}
+.toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:rgba(40,52,49,.93);
+  color:#fff;padding:11px 20px;border-radius:14px;font-size:14px;opacity:0;pointer-events:none;transition:all .28s ease;z-index:99}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(min-width:431px){.app{box-shadow:0 0 60px rgba(80,90,84,.10)}}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- ==================== 首页 ==================== -->
+<section class="pad" id="s-home">
+  <div class="hero">
+    <div class="blob"></div>
+    <div class="eyebrow">REFUSAL SCRIPT KIT</div>
+    <h1 class="h1">拒绝话术速查表</h1>
+    <p class="lead">同事甩活 · 亲戚问工资 · 朋友借钱<br>三个场景，九套能直接复制的话</p>
+    <div class="chips">
+      <span class="chip">3 个高频场景</span>
+      <span class="chip">9 套话术</span>
+      <span class="chip">每套 3 句</span>
+      <span class="chip">附拒绝力度自测</span>
+    </div>
+  </div>
+
+  <div class="tipbar">
+    <div class="ic">i</div>
+    <div class="tx">点任意一句就能复制，粘到聊天框里改两个字就能用。嫌太生硬就换一档，三个场景都给了「直接 / 留台阶 / 轻松」三种说法。</div>
+  </div>
+
+  <!-- 30 秒速查表 -->
+  <div class="quick">
+    <div class="qtcap">
+      <div class="t">30 秒速查表</div>
+      <div class="b">来不及看全文时看这张</div>
+    </div>
+    <table class="qt">
+      <thead>
+        <tr><th>场景</th><th>直接版</th><th>留台阶版</th><th>轻松版</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="sc">同事<br>甩活</td>
+          <td class="g v1">这活按分工归你</td>
+          <td class="g v2">我搭框架你填</td>
+          <td class="g v3">我这边压三件了</td>
+        </tr>
+        <tr>
+          <td class="sc">亲戚<br>问工资</td>
+          <td class="g v1">工资不太方便聊</td>
+          <td class="g v2">够花不富裕</td>
+          <td class="g v3">饿不死别操心</td>
+        </tr>
+        <tr>
+          <td class="sc">朋友<br>借钱</td>
+          <td class="g v1">这笔我拿不出</td>
+          <td class="g v2">大额给不了小额行</td>
+          <td class="g v3">钱包比脸干净</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="rule"></div>
+    <div class="muted" style="padding:0 4px">用法：先判断眼前这个人和这件事的关系远近，再挑一档说法。同一句话，对上级和对发小，用法完全不同。</div>
+  </div>
+
+  <div class="rule"></div>
+  <div class="muted">往下翻是完整话术 · 末尾有一个 5 题小测，看看你的拒绝力度偏软还是偏硬。</div>
+
+  <div style="height:26px"></div>
+  <button class="rbtn p" id="goScene1">直接看「同事甩活」的话</button>
+  <button class="rbtn s" id="goTest">先做拒绝力度自测</button>
+</section>
+
+<!-- ==================== 场景区 ==================== -->
+<section class="pad" id="s-scenes" style="display:none">
+
+  <!-- ===== 场景 1 ===== -->
+  <div class="sc-head" id="sc1">
+    <div class="sc-no">1</div>
+    <div class="tt">
+      <div class="n">同事甩活</div>
+      <div class="d">对方把自己的活推过来，语气轻松，好像本来就该你做。</div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#3F6F68"></span>直接版</div>
+      <button class="copyall" data-group="s1-direct">复制整段</button>
+    </div>
+    <div class="line" data-copy="这活按分工本来就在你那边，我手上还有 A 客户的东西今天要交。"><div class="tx">这活按分工本来就在你那边，我手上还有 A 客户的东西今天要交。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="我们先把优先级排一下，你这个排前面，还是我先做我手上的？"><div class="tx">我们先把优先级排一下，你这个排前面，还是我先做我手上的？</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="这个我做不了，不是不帮忙，是时间确实排不开。"><div class="tx">这个我做不了，不是不帮忙，是时间确实排不开。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v">对方和你是<em>平级或更低</em>，事情本身也确实该他做；<em>对方强势</em>，软话会被当成可以商量。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「那谁做？」「大家都这么干。」<br>→ 情绪上有点被顶回来，但对方知道你有理。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">不解释动机，只重复边界：「<em>这块归你</em>。你要实在没时间，我们可以一起看看能不能拆一半。」</div></div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#8A6238"></span>留台阶版</div>
+      <button class="copyall" data-group="s1-soft">复制整段</button>
+    </div>
+    <div class="line" data-copy="你要是实在腾不出手，我可以帮你看思路，交付得你自己来。"><div class="tx">你要是实在腾不出手，我可以帮你看思路，交付得你自己来。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="我先给你搭个框架，二十分钟能给你，内容得你自己填。"><div class="tx">我先给你搭个框架，二十分钟能给你，内容得你自己填。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="我们一起看看能不能拆一下，你做一半，我把架子搭好。"><div class="tx">我们一起看看能不能拆一下，你做一半，我把架子搭好。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v">关系还行、<em>以后还要一起干活</em>；直接拒绝怕影响合作；这件事你顺手能搭一部分。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「行吧，那我自己弄。」<br>→ 对方接住了台阶，但事没真正推回去。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">把交付责任说清楚：「<em>框架我给你，署名和内容你定</em>。」避免后来变成你替他做完。</div></div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#5E5790"></span>轻松版</div>
+      <button class="copyall" data-group="s1-easy">复制整段</button>
+    </div>
+    <div class="line" data-copy="这个活儿有点烫手啊，我这边已经压着三件了。"><div class="tx">这个活儿有点烫手啊，我这边已经压着三件了。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="要不然我请你喝奶茶，这个你搞定？开玩笑的，我真忙。"><div class="tx">要不然我请你喝奶茶，这个你搞定？开玩笑的，我真忙。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="你这事儿我真帮不上，我这周连轴转，周三都请不了假。"><div class="tx">你这事儿我真帮不上，我这周连轴转，周三都请不了假。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v"><em>气氛本来就松</em>的工位日常；对方是爱开玩笑的同事；事情本身也不急。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「行吧那我找别人。」<br>→ 笑着推回去，但对方可能记住你「嘴上答应过」。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">玩笑收尾后补一句实锤：「<em>真给不了，你早点找别人更稳</em>。」</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 场景 2 ===== -->
+  <div class="sc-head" id="sc2">
+    <div class="sc-no">2</div>
+    <div class="tt">
+      <div class="n">亲戚问工资</div>
+      <div class="d">家庭饭桌、亲戚聚会，谁都能问一句「一个月挣多少」，问的人觉得是关心。</div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#3F6F68"></span>直接版</div>
+      <button class="copyall" data-group="s2-direct">复制整段</button>
+    </div>
+    <div class="line" data-copy="我们这行差别挺大的，具体数字聊起来也没意思，咱说点别的吧。"><div class="tx">我们这行差别挺大的，具体数字聊起来也没意思，咱说点别的吧。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="工资我一般不聊，不是藏着，就是说了对谁都没用。"><div class="tx">工资我一般不聊，不是藏着，就是说了对谁都没用。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="就是个打工的，拿固定那点，不值当说。"><div class="tx">就是个打工的，拿固定那点，不值当说。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v"><em>对方反复追问</em>；你不想给模糊数字被套话；饭桌上有别的亲戚跟着听。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「哎呀说说呗，又不外人。」<br>→ 场面话顶回来，你还得再挡一次。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">把话题推走，不解释理由：「<em>我先喝口水，妈你那个菜谱发我了没？</em>」</div></div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#8A6238"></span>留台阶版</div>
+      <button class="copyall" data-group="s2-soft">复制整段</button>
+    </div>
+    <div class="line" data-copy="大方向还行，具体的就不细说了，奖金这些也不稳定。"><div class="tx">大方向还行，具体的就不细说了，奖金这些也不稳定。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="比您想的可能少点，比您想的也可能多点，混口饭吃。"><div class="tx">比您想的可能少点，比您想的也可能多点，混口饭吃。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="够花，不富裕，细节就不聊了啊。"><div class="tx">够花，不富裕，细节就不聊了啊。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v">对方是<em>长辈且关系不错</em>；直接说「不方便」会显得生硬；你想给个模糊轮廓。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「够花就行，别太累。」<br>→ 对方拿到台阶，通常会转话题；但也可能接着猜。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">把模糊答案坐实成一句事实：「<em>我这边挺稳定的，先顾好自己</em>。」</div></div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#5E5790"></span>轻松版</div>
+      <button class="copyall" data-group="s2-easy">复制整段</button>
+    </div>
+    <div class="line" data-copy="够吃饭不够买房，您别惦记我存钱的事啦。"><div class="tx">够吃饭不够买房，您别惦记我存钱的事啦。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="这个数说了怕您担心，说少了怕您觉得我混。"><div class="tx">这个数说了怕您担心，说少了怕您觉得我混。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="还行吧，饿不死。"><div class="tx">还行吧，饿不死。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v"><em>气氛轻松的饭桌</em>；对方是爱开玩笑的长辈；你对数字本身不在意。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「你这孩子还打哑谜。」<br>→ 对方笑着放过；但换个人群可能觉得你在敷衍。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">玩笑之后补实锤：「<em>真还行，够花，您别操心我</em>。」</div></div>
+    </div>
+  </div>
+
+  <!-- ===== 场景 3 ===== -->
+  <div class="sc-head" id="sc3">
+    <div class="sc-no">3</div>
+    <div class="tt">
+      <div class="n">朋友借钱</div>
+      <div class="d">关系是真的，事也是真的，只是时间点不对，或者金额超出能力。</div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#3F6F68"></span>直接版</div>
+      <button class="copyall" data-group="s3-direct">复制整段</button>
+    </div>
+    <div class="line" data-copy="这个钱我拿不出来，这段时间我手头也紧。"><div class="tx">这个钱我拿不出来，这段时间我手头也紧。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="帮不了这个忙，换别的忙我一定帮。"><div class="tx">帮不了这个忙，换别的忙我一定帮。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="我这边有房贷要还，这笔真拿不出。"><div class="tx">我这边有房贷要还，这笔真拿不出。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v">金额<em>超出你能力范围</em>；对方反复催；你担心说了实数之后还要被记着。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「你之前不是借过我吗。」<br>→ 用旧账压过来，容易让人当场心软。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">接住事实、不接住旧账：「<em>上次是我能帮的时候，这次是真的没有</em>。」</div></div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#8A6238"></span>留台阶版</div>
+      <button class="copyall" data-group="s3-soft">复制整段</button>
+    </div>
+    <div class="line" data-copy="大额的我真给不了，小一点的可以，你看我能出多少。"><div class="tx">大额的我真给不了，小一点的可以，你看我能出多少。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="我给你想个办法，我帮你一起凑，而不是全靠我一个人。"><div class="tx">我给你想个办法，我帮你一起凑，而不是全靠我一个人。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="我可以借你两千，但要分几次还，我也要留生活费。"><div class="tx">我可以借你两千，但要分几次还，我也要留生活费。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v">对方<em>确实值得帮</em>，你想帮但金额太大；关系重要，不适合一句「不行」。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「行吧，那我再想想办法。」<br>→ 对方接受了小额，但<em>没说还款时间</em>。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">当场定三件事：<em>金额、什么时候还、怎么还</em>。含糊过去会变成长期人情债。</div></div>
+    </div>
+  </div>
+
+  <div class="ver">
+    <div class="vhead">
+      <div class="nm"><span class="dot" style="background:#5E5790"></span>轻松版</div>
+      <button class="copyall" data-group="s3-easy">复制整段</button>
+    </div>
+    <div class="line" data-copy="兄弟，我这段时间在吃土，你看我这顿都点的便宜的。"><div class="tx">兄弟，我这段时间在吃土，你看我这顿都点的便宜的。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="我钱包比脸还干净，真拿不出来。"><div class="tx">我钱包比脸还干净，真拿不出来。</div><div class="cp">拷</div></div>
+    <div class="line" data-copy="这钱我自己都差着，你问问别人吧。"><div class="tx">这钱我自己都差着，你问问别人吧。</div><div class="cp">拷</div></div>
+    <div class="meta">
+      <div class="r"><div class="k">适用场景</div><div class="v"><em>发小之间</em>、平时就靠开玩笑说话；金额不大；你不想气氛变得严肃。</div></div>
+      <div class="r"><div class="k">可能的反应</div><div class="v">「行啊，那算了。」<br>→ 对方不再提，但你也没说清楚<em>到底能不能给</em>。</div></div>
+      <div class="r"><div class="k">怎么接下一句</div><div class="v">玩笑之后一定要落一句实话：<em>「真给不了，你早点想别的办法」</em>，别让对方等。</div></div>
+    </div>
+  </div>
+
+  <div style="height:20px"></div>
+  <button class="rbtn p" id="toTest">做一下「你的拒绝力度」小测</button>
+  <button class="rbtn s" id="backHome">回到速查表</button>
+</section>
+
+<!-- ==================== 自测 ==================== -->
+<section class="pad" id="s-test" style="display:none">
+  <div class="sc-head">
+    <div class="sc-no">?</div>
+    <div class="tt">
+      <div class="n">你的拒绝力度</div>
+      <div class="d">5 道题，看看你是「太软」「刚好」还是「太硬」。</div>
+    </div>
+  </div>
+
+  <div class="qwrap" id="qWrap">
+    <div class="qbar"><i id="qBar" style="width:20%"></i></div>
+    <div class="qcnt">第 <b id="qNow">1</b> / 5 题</div>
+    <div class="qtext" id="qText"></div>
+    <div class="opts" id="qOpts"></div>
+    <button class="backbtn" id="qBack">← 上一题</button>
+  </div>
+
+  <div id="rWrap" style="display:none">
+    <div class="res-hero" id="resHero">
+      <div class="kicker">YOUR REFUSAL LEVEL</div>
+      <div class="tname" id="resName"></div>
+      <div class="oneline" id="resOne"></div>
+    </div>
+    <div class="res-list" id="resList"></div>
+    <button class="rbtn p" id="qAgain">再测一次</button>
+    <button class="rbtn s" id="resToScenes">回去看话术</button>
+  </div>
+
+  <p class="foot">这份小测只做自我观察，不构成专业心理评估、诊断或医疗建议。<br>话术要按你面对的人调整，别硬套。</p>
+</section>
+
+<p class="foot" id="s-foot">拒绝话术速查表 · 三个场景九套话<br>话术是参考句，不是标准答案，说得像你才算数。</p>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)};
+  var toastEl=$('#toast'),toastT=null;
+  function toast(m){toastEl.textContent=m;toastEl.classList.add('on');
+    clearTimeout(toastT);toastT=setTimeout(function(){toastEl.classList.remove('on')},1900);}
+  function fallbackCopy(t){
+    var ta=document.createElement('textarea');
+    ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.left='-9999px';
+    document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,ta.value.length);
+    var ok=false;try{ok=document.execCommand('copy')}catch(e){ok=false}
+    document.body.removeChild(ta);
+    toast(ok?'已复制，去对话框粘贴':'长按选中文字手动复制');
+  }
+  function copy(t){
+    if(navigator.clipboard&&window.isSecureContext){
+      navigator.clipboard.writeText(t).then(function(){toast('已复制，去对话框粘贴')},function(){fallbackCopy(t)});
+    }else{fallbackCopy(t)}
+  }
+  document.addEventListener('click',function(e){
+    var ln=e.target.closest?e.target.closest('.line'):null;
+    if(ln){copy(ln.getAttribute('data-copy'));return}
+    var ca=e.target.closest?e.target.closest('.copyall'):null;
+    if(ca){
+      var g=ca.getAttribute('data-group'),all=[],nodes=document.querySelectorAll('.ver');
+      for(var i=0;i<nodes.length;i++){
+        var vh=nodes[i].querySelector('.vhead .nm'),btn=nodes[i].querySelector('.copyall');
+        if(!btn||btn.getAttribute('data-group')!==g)continue;
+        var lines=nodes[i].querySelectorAll('.line');
+        for(var j=0;j<lines.length;j++)all.push(lines[j].getAttribute('data-copy'));
+      }
+      copy(all.join('\n\n'));
+      return;
+    }
+  });
+
+  /* ---------- 页面切换 ---------- */
+  var pages={home:$('#s-home'),scenes:$('#s-scenes'),test:$('#s-test')};
+  function show(k){
+    for(var kk in pages)pages[kk].style.display=(kk===k)?'block':'none';
+    $('#s-foot').style.display=(k==='home')?'block':'none';
+    window.scrollTo(0,0);
+  }
+  $('#goScene1').addEventListener('click',function(){show('scenes');setTimeout(function(){
+    var t=$('#sc1');if(t)window.scrollTo(0,t.offsetTop-14);},30)});
+  $('#goTest').addEventListener('click',function(){show('test');renderQ(0)});
+  $('#toTest').addEventListener('click',function(){show('test');renderQ(0)});
+  $('#backHome').addEventListener('click',function(){show('home')});
+  $('#resToScenes').addEventListener('click',function(){show('scenes')});
+
+  /* ---------- 自测 ---------- */
+  var QZ=[
+    {q:'同事在群里@你：「这个你顺手做一下？」你回「好的，我来」。你心里的松口程度是：',
+     o:[['完全没问题',0],['可以，但我得先做完手上的',1],['先说清分工，不接',2]]},
+    {q:'对方说「就这一次，很快的」，你当时的反应是：',
+     o:[['心里一软就答应了',0],['先问要多久、多急',1],['说明这次不行、下次可以',2]]},
+    {q:'拒绝之后对方沉默了几秒，你会：',
+     o:[['马上补一句「那你找别人也行」',0],['正常接着聊别的',1],['不解释，也不补救',2]]},
+    {q:'亲戚问起你的工资，你一般：',
+     o:[['说一个大概数字',0],['说个模糊区间',1],['直接说不方便聊',2]]},
+    {q:'朋友开口借钱，你一般：',
+     o:[['说「我尽力」，然后去凑',0],['说出你能给的上限',1],['直接说不方便',2]]}
+  ];
+  var ans=[],cur=0;
+  var RES=[
+    {n:'你的拒绝偏软',c:'#8A6238',bg:'#FBEADC',
+     one:'你习惯先答应、再想办法。关系被你护住了，但你自己的时间和精力被一次次挪走，而且事后常有「早知道就说不」的憋屈。',
+     list:[['先别急着答应','对方开口时先在心里数三秒，这三秒用来想「我到底做不做得了」，不是用来想怎么拒绝才不伤感情。'],
+           ['把「不行」换成事实','「不行」听起来像对抗，「这个时间我排不开」只是陈述。事实比态度更难被反驳。'],
+           ['补一句替代方案','纯拒绝容易让人记住你的冷，加一句「我能帮你做什么」，反而更容易被接受。'],
+           ['今天的小练习','今晚翻一下这段时间的聊天记录，找出一次你答应了但其实做不了的事，给对方补一条消息说明实际进度。']]},
+    {n:'你的拒绝刚好',c:'#3F6F68',bg:'#E4F0ED',
+     one:'你知道自己的边界在哪，也知道怎么给对方留台阶。这是很难练出来的状态，保持住比追求更强硬更划算。',
+     list:[['把犹豫换成时间点','「我再想想」容易变成拖着不回。换成「我今晚给你答复」，对方好安排，你也不亏。'],
+           ['留意事后那口气','拒绝完如果心里发紧，说明你还在替对方承担情绪。这口劲要还给自己。'],
+           ['把熟练的话术存起来','同一种话你上次是怎么说的、对方什么反应，下次直接调出来用。'],
+           ['今天的小练习','给自己写一条固定的开场白，用来应付「就这一次」这类话，练到不用想就能说出口。']]},
+    {n:'你的拒绝偏硬',c:'#5E5790',bg:'#ECE9F7',
+     one:'你的边界很清楚，硬是硬在话落地时几乎不留余地。对方常常听懂了意思，却没接到情绪，容易把这件事记成态度问题。',
+     list:[['补一句不评价对方的话','「这事我不参与，不是针对你」——一句切割对象的话，能把冲突从立场拉回事情。'],
+           ['给对方一个可走的台阶','拒绝之后给一句出路：「这块我不行，你可以问下 X 或者我帮你问问排期。」'],
+           ['检查是不是累积的','如果前几次拒绝都特别硬，可能是前面容忍太久，一次性把账结了。'],
+           ['今天的小练习','找一件你上次拒绝得太硬的事，今天补一句客气话：「上次说得急了点，抱歉。」']]}
+  ];
+  function renderQ(i){
+    if(i>=QZ.length){renderResult();return}
+    cur=i;
+    $('#qNow').textContent=(i+1);
+    $('#qBar').style.width=Math.round((i+1)/QZ.length*100)+'%';
+    $('#qText').textContent=QZ[i].q;
+    var box=$('#qOpts');box.innerHTML='';
+    for(var j=0;j<QZ[i].o.length;j++){
+      (function(idx,opt){
+        var b=document.createElement('button');
+        b.className='opt'+(ans[i]===opt[1]?' sel':'');
+        b.innerHTML='<span class="k">'+'ABC'.charAt(idx)+'</span><span>'+opt[0]+'</span>';
+        b.addEventListener('click',function(){
+          ans[i]=opt[1];
+          for(var k=0;k<box.children.length;k++)box.children[k].classList.remove('sel');
+          b.classList.add('sel');
+          setTimeout(function(){renderQ(i+1)},260);
+        });
+        box.appendChild(b);
+      })(j,QZ[i].o[j]);
+    }
+    $('#qBack').style.display=(i===0)?'none':'block';
+  }
+  function renderResult(){
+    var s=0;for(var i=0;i<ans.length;i++)s+=(ans[i]||0);
+    var r;
+    if(s<=3)r=RES[0];else if(s<=7)r=RES[1];else r=RES[2];
+    $('#qWrap').style.display='none';
+    $('#rWrap').style.display='block';
+    var hero=$('#resHero');
+    hero.style.background='linear-gradient(135deg,'+r.bg+',#fff)';
+    hero.style.color=r.c;
+    $('#resName').textContent=r.n;
+    $('#resOne').textContent=r.one;
+    var list=$('#resList');list.innerHTML='';
+    for(var j=0;j<r.list.length;j++){
+      var d=document.createElement('div');d.className='res-item';
+      d.innerHTML='<div class="ic" style="background:'+r.c+'">'+(j+1)+'</div><div class="tx"><b>'+r.list[j][0]+'</b>'+r.list[j][1]+'</div>';
+      list.appendChild(d);
+    }
+    window.scrollTo(0,0);
+  }
+  $('#qBack').addEventListener('click',function(){
+    if(cur>0){ans.length=cur-1;renderQ(cur-1)}
+  });
+  $('#qAgain').addEventListener('click',function(){ans=[];renderQ(0)});
+})();
+</script>
+</body>
+</html>
